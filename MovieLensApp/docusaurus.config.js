@@ -77,11 +77,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'About',
           },
           // {to: '/blog', label: 'Blog', position: 'left'}, 
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/devRaelBraga/LG-Challenge-FullStack',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,38 +94,42 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'About',
+                to: '/docs/About/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Technologies',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Docusaurus',
+                href: 'https://docusaurus.io/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'NestJS',
+                href: 'https://nestjs.com/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Docker',
+                href: 'https://www.docker.com/',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'My links',
             items: [
               {
-                label: 'Blog',
+                label: 'My site',
                 href: 'https://hisrael.dev'
               },
               { 
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/devRaelBraga',
+              },
+              { 
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/hisrael-da-silva-braga-052188216/',
               },
             ],
           },

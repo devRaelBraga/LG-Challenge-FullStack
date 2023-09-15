@@ -13,11 +13,14 @@
 }
 
 .movieTableContainer td{
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* gap: 5vw; */
     width: 100%;
-    color: white;
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+.movieTableContainer td p{
+    text-wrap: nowrap;
 }
 
 .movieTableContainer th p {
@@ -31,23 +34,6 @@
     
 }
 
-.movieTableContainer tr:first-child {
-    background-color: rgb(75, 75, 75);
-    color: white;
-    /* display: flex;           
-    flex-wrap: wrap;
-    gap: 5vw; */
-}
-
 .movieTableContainer tr {
-    background-color: rgb(167, 167, 167);
     width: 100%;
 }           
-
-
-.movieTableContainer tr:nth-child(2n)     {
-    background-color: rgb(99, 99, 99);
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 5vw; */
-}

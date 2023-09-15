@@ -3,12 +3,11 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-
-import styles from './index.module.css';
+import styles from './index.module.css';  
 import MoviesTable from '../components/MoviesTable';
 import SearchBar from '../components/SearchBar';
+
+
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -21,14 +20,20 @@ export default function Home() {
   return (
     <Layout
       title={``}
-      description="Description will go into a meta tag in <head />">
+      description="Table with movies and ratings">
       {/* <HomepageHeader /> */}
 
+      <Link
+        className="button button--secondary   "
+        to="/recommended">
+        See the best-rated movies!  
+      </Link>
       <main className={styles.main}>
-
-        <SearchBar setFetchData={setFetchData} ></SearchBar>
-
-        {fetchData && <MoviesTable movieFetch={fetchData} setMovieFetch={setFetchData}/> }   
+        <Link  ></Link>
+        <div className={styles.content}>
+          <SearchBar setFetchData={setFetchData} ></SearchBar>
+          {fetchData && <MoviesTable movieFetch={fetchData} setMovieFetch={setFetchData}/> }   
+        </div>
 
         {/* <HomepageFeatures /> */}
       </main>

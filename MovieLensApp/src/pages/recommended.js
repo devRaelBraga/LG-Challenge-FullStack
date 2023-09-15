@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import MoviesTable from '../components/MoviesTable';
@@ -15,14 +14,9 @@ export default function RecommendedPage() {
   return (
     <Layout
       title={``}
-      description="Description will go into a meta tag in <head />">
-      {/* <HomepageHeader /> */}
-
+      description="Best-rated movies">
       <main>
-
-        {fetchData && <MoviesTable movieFetch={fetchData} /> }   
-
-        {/* <HomepageFeatures /> */}
+        {fetchData && <MoviesTable movieFetch={fetchData} setMovieFetch={setFetchData}/> }   
       </main>
     </Layout>
   );

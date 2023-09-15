@@ -2,8 +2,9 @@
 .container {
     display: flex;
     /* border: 2px solid blue; */
+    flex-direction: row;
     width: fit-content;
-    height: 2em;
+    height: 2.5em;
     /* border-radius: 50% */        
 }
 
@@ -13,13 +14,22 @@
 
 .container button {
     cursor: pointer;
+    width: 3em; 
 }
+.container button:hover {
+    cursor: pointer;
+    width: 3em;
+    /* background-color: rgb(221, 221, 221); */
+}
+
+
 .container input {
     padding-left: .5em;
     padding-right: 1em;
+    background-color: transparent;
 }
 .container input:focus {
     border: none;
-    
+    outline: none;
 }
 

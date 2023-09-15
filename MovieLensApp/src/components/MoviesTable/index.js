@@ -46,10 +46,16 @@ export default function MoviesTable({movieFetch, setMovieFetch}){
                     
                     {movieFetch && movieFetch.map((movie, index) =>
                             <tr key={index}>
-                                <td>{movie.title}</td>
-                                <td>{movie.year}</td>
-                                <td> {movie.genres} </td>
-                                <td title={movie.quantity + ' ratings'} >{movie.rating.toFixed(2)}</td>
+                                <td><p>{movie.title}</p></td>
+                                <td><p>{movie.year}</p></td>
+                                <td>
+                                    <p>
+                                    {movie.genres.split('|').map(((item, index) => 
+                                        item + (index == movie.genres.split('|').length -1 ? '' : ' | '))
+                                        )}
+                                    </p>
+                                </td>
+                                <td title={movie.quantity + ' ratings'} ><p>{movie.rating.toFixed(2)}</p></td>
                             </tr>       
                         )}
                 </tbody>
