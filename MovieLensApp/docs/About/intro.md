@@ -63,7 +63,7 @@ MovieLens API makes data available at routes:
 Client consumes data on ```localhost:3003``` via fetch shows it to the user on a table.
 It's also possible to sort movies by year or by rating, just clicking on Year or Rating table header.
 
-![image](https://i.imgur.com/8SUrPrd.png)
+![image](https://i.imgur.com/mZEqZha.png)
 
 ##   Remaining Work
 
