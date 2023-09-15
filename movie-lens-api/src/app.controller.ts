@@ -19,7 +19,9 @@ export class AppController {
   searchByTitle(
     @Query('title') title:string = '',
     @Query('year') year?:number,
+    @Query('genre') genre:string = '',
+    @Query('top') top:number = 500,
   ) { 
-    return this.appService.searchTitleYear(title, Number(year));
+    return this.appService.searchTitleYear(title, Number(year), String(genre), Number(top));
   }
 }

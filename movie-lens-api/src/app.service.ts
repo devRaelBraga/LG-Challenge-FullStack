@@ -31,9 +31,7 @@ export class AppService {
     const prisma = new PrismaClient();
 
     try {
-      let movies: movie[] = await prisma.filmeRating.findMany({
-        take: 500
-      })
+      let movies: movie[] = await prisma.filmeRating.findMany()
   
       movies = movies.map((movie) => {
           const overallRating = movie.rating * movie.quantity / 2
@@ -46,7 +44,7 @@ export class AppService {
   
       movies.sort((a, b) => b.overallRating - a.overallRating)
   
-      return movies
+      return movies.slice(0, 500)
 
     } catch (error) {
       return error.message
@@ -54,15 +52,23 @@ export class AppService {
 
   }
 
-  async searchTitleYear(searchedTitle:string, year:number): Promise<movie[]> {
+  async searchTitleYear(searchedTitle:string, year:number, genre:string, top:number): Promise<movie[]> {
     const prisma = new PrismaClient()
 
     try {
       let whereClause: any = {}
+
+
   
       if(searchedTitle){
         whereClause.title = {
           contains: searchedTitle
+        }
+      }
+
+      if(genre){
+        whereClause.genres = {
+          contains: genre
         }
       }
   
@@ -74,7 +80,7 @@ export class AppService {
   
       return await prisma.filmeRating.findMany({
         where: whereClause,
-        take: 500
+        take: top? top : 500
       })
     } catch (error) {
       return error.message
