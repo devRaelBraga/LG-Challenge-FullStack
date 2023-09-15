@@ -64,7 +64,3 @@ Client consumes data on ```localhost:3003``` via fetch shows it to the user on a
 It's also possible to sort movies by year or by rating, just clicking on Year or Rating table header.
 
 ![image](https://i.imgur.com/mZEqZha.png)
-
-##   Remaining Work
-
-- Interface improvements
