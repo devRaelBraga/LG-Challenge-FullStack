@@ -1,0 +1,53 @@
+
+.container {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.movieTableContainer {
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* gap: 5vw; */
+    /* width: 40%; */
+}
+
+.movieTableContainer td{
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* gap: 5vw; */
+    width: 100%;
+    color: white;
+}
+
+.movieTableContainer th p {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    cursor: pointer;
+    
+}
+
+.movieTableContainer tr:first-child {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    /* display: flex;           
+    flex-wrap: wrap;
+    gap: 5vw; */
+}
+
+.movieTableContainer tr {
+    background-color: rgb(167, 167, 167);
+    width: 100%;
+}           
+
+
+.movieTableContainer tr:nth-child(2n)     {
+    background-color: rgb(99, 99, 99);
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 5vw; */
+}

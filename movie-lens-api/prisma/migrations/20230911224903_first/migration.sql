@@ -1,0 +1,33 @@
+-- CreateTable
+CREATE TABLE "Movie" (
+    "movieId" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "title" TEXT NOT NULL,
+    "genres" TEXT NOT NULL,
+    "year" INTEGER NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "Tag" (
+    "movieId" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "tag" TEXT NOT NULL,
+    "timestamp" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "userId" INTEGER NOT NULL,
+    CONSTRAINT "Tag_movieId_fkey" FOREIGN KEY ("movieId") REFERENCES "Movie" ("movieId") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "Rating" (
+    "movieId" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
+    "rating" REAL NOT NULL,
+    "timestamp" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Rating_movieId_fkey" FOREIGN KEY ("movieId") REFERENCES "Movie" ("movieId") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "Link" (
+    "movieId" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "imdbId" INTEGER NOT NULL,
+    "tmdbId" INTEGER NOT NULL,
+    CONSTRAINT "Link_movieId_fkey" FOREIGN KEY ("movieId") REFERENCES "Movie" ("movieId") ON DELETE RESTRICT ON UPDATE CASCADE
+);

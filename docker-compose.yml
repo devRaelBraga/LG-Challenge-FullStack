@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  MovieLensAPI:
+    build: ./movie-lens-api
+    image: movie-lens-api
+    ports:
+      - "3003:3003"
+
+  MovieLens:
+    build: ./MovieLensApp
+    image: movielens
+    ports:
+      - "3000:3000"
+

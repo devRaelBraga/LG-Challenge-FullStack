@@ -1,0 +1,25 @@
+
+.container {
+    display: flex;
+    /* border: 2px solid blue; */
+    width: fit-content;
+    height: 2em;
+    /* border-radius: 50% */        
+}
+
+.container * {
+    border: none;
+}
+
+.container button {
+    cursor: pointer;
+}
+.container input {
+    padding-left: .5em;
+    padding-right: 1em;
+}
+.container input:focus {
+    border: none;
+    
+}
+
