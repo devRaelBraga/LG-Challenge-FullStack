@@ -4,7 +4,7 @@ FROM node:18-alpine
 # Defina o diretório de trabalho no container
 WORKDIR /MovieLensApp
 
-ENV API_URL=http://host.docker.internal:3003
+ENV API_URL=http://localhost:3003
 
 # Copie os arquivos da aplicação para o container
 COPY . .
