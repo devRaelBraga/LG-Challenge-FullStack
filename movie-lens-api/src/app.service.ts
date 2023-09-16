@@ -14,12 +14,12 @@ type movie = {
 
 @Injectable()
 export class AppService {
+  private prisma: PrismaClient = new PrismaClient();
   
   async getMovies(): Promise<movie[]> {
-    const prisma = new PrismaClient();
 
     try {
-      return await prisma.filmeRating.findMany({
+      return await this.prisma.filmeRating.findMany({
         take: 500
       });
     } catch (error) {
@@ -28,10 +28,9 @@ export class AppService {
   }
   
   async getRecomendation(): Promise<movie[]> {
-    const prisma = new PrismaClient();
 
     try {
-      let movies: movie[] = await prisma.filmeRating.findMany()
+      let movies: movie[] = await this.prisma.filmeRating.findMany()
   
       movies = movies.map((movie) => {
           const overallRating = movie.rating * movie.quantity / 2
@@ -53,7 +52,6 @@ export class AppService {
   }
 
   async searchTitleYear(searchedTitle:string, year:number, genre:string, top:number): Promise<movie[]> {
-    const prisma = new PrismaClient()
 
     try {
       let whereClause: any = {}
@@ -78,15 +76,12 @@ export class AppService {
         }
       }
   
-      return await prisma.filmeRating.findMany({
+      return await this.prisma.filmeRating.findMany({
         where: whereClause,
         take: top? top : 500
       })
     } catch (error) {
       return error.message
     }
-
-
-
   }
 }
