@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Technologies used 
 
 This section will show you the technologies used to create MovieLensApp.

@@ -1,6 +1,10 @@
-# Arquitetura
+---
+sidebar_position: 3
+---
 
-Descrição detalhada da arquitetura do sistema utilizando o modelo C4 Model.
+# Architecture
+
+Detailed description of the architecture of the application using the C4 model.
 
 ## C4 Model
 
