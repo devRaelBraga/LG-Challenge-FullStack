@@ -54,6 +54,11 @@ MovieLens API makes data available at routes:
 - search movies: GET /search?title=&year=&genre=&top=
 - get recommended movies: GET /recomendation
 
+Best recommended movies were sorted using the formula:
+```
+movieScore = movieRating * quantityRating/2
+```
+
 ### Consuming Data
 
 Client consumes data on ```localhost:3003``` via fetch shows it to the user on a table.
